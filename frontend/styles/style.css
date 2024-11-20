@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff6b00;
+}
+
+.nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav{
+    margin-right: 400px;
+}
+
+.nav :hover{
+    color: #ff5700;
+}
+
+.extra-links a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.hero {
+    background-image: url('../image/kashmir.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #ff6b00;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: #ff6b00;
+    margin: 1rem 0 0.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.card h3:hover {
+    transform: scale(1.1); 
+    color: #ff5700; 
+}
+
+.card {
+    text-decoration: none;
+}
+
+.card:hover {
+    text-decoration: none; 
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.plan-trip-btn {
+    background-color: #ff6b00;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.plan-trip-btn:hover {
+    background-color: #ff5700;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    background-color: #f8f8f8;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.footer-links a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: #ff6b00;
+}

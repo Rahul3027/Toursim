@@ -1,0 +1,144 @@
+/* General Reset and Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Background Slideshow */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    animation: slideshow 20s infinite ease-in-out;
+}
+
+@keyframes slideshow {
+    0% { background-image: url('/tourism/frontend/img/mountain.jpg'); }
+    33% { background-image: url('/tourism/frontend/img/beach.jpg'); }
+    66% { background-image: url('/tourism/frontend/img/temple.jpg'); }
+    100% { background-image: url('/tourism/frontend/img/temples.jpg'); }
+}
+
+/* Form Container */
+.login-container, .signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login, .signup {
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.login h2, .signup h2 {
+    color: #ff6b00;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    width: 100%;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #ff6b00;
+    box-shadow: 0 0 6px rgba(255, 107, 0, 0.5);
+}
+
+form button {
+    background-color: #ff6b00;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #ff5700;
+}
+
+a {
+    display: block;
+    margin-top: 1rem;
+    color: #333;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff6b00;
+    text-decoration: underline;
+}
+
+/* Footer Links on Forms */
+form p {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+form p a {
+    color: #ff6b00;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+form p a:hover {
+    color: #ff5700;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .login, .signup {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .login h2, .signup h2 {
+        font-size: 1.5rem;
+    }
+}
