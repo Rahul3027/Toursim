@@ -24,29 +24,27 @@ app.use(session({
     saveUninitialized: true
 }));
 
-// Middleware
+
 app.use(express.urlencoded({ extended: false }));
 
-// Serve static files from the frontend directory
 app.use(express.static(path.join(__dirname, "../frontend")));
 
-// Routes
-// Home route (redirects to index.html)
+
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../frontend/index.html"));
 });
 
-// Login page
+
 app.get("/login", (req, res) => {
     res.sendFile(path.join(__dirname, "../frontend/login.html"));
 });
 
-// Signup page
+
 app.get("/signup", (req, res) => {
     res.sendFile(path.join(__dirname, "../frontend/signup.html"));
 });
 
-// Login logic
+
 app.post("/login", (req, res) => {
     const { username, password } = req.body;
     collection.findOne({ username, password })
@@ -63,7 +61,7 @@ app.post("/login", (req, res) => {
         });
 });
 
-// Signup logic
+
 app.post("/signup", async (req, res) => {
     const { username, password } = req.body;
     try {
@@ -79,7 +77,7 @@ app.post("/signup", async (req, res) => {
     }
 });
 
-// Logout route
+
 app.get("/logout", (req, res) => {
     req.session.destroy(err => {
         if (err) {
@@ -90,7 +88,7 @@ app.get("/logout", (req, res) => {
     });
 });
 
-// Start the server
+
 app.listen(5000, () => {
     console.log("Server started on port 5000");
 });
