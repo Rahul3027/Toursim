@@ -14,7 +14,7 @@ body {
 .header {
     background: white;
     padding: 1rem 2rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
@@ -25,10 +25,17 @@ body {
     margin: 0 auto;
 }
 
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
 .nav-links a {
     text-decoration: none;
     color: #333;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
     font-weight: 500;
 }
 
@@ -48,7 +55,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background-image: url('palace.jpg');
+    background-image: url('../image/indtour.webp');
     background-size: cover;
     background-position: center;
     height: 60vh;
@@ -61,26 +68,42 @@ body {
 
 .hero h1 {
     font-size: 3.5rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Tour Types */
 .tour-types {
-    padding: 2rem;
+    padding: 2rem 0; /* Reduced side padding */
     background: #f5f5f5;
 }
 
 .tour-icons {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 0 auto; /* Center align */
+    padding: 0 1rem; /* Adds small padding inside to avoid content sticking to edges */
+    max-width: 100%; /* Ensures full width utilization */
+}
+
+.tour-icon img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tour-icon img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .tour-icon {
     text-align: center;
 }
+
 
 /* Packages Section */
 .packages {
@@ -113,7 +136,7 @@ body {
 
 .zone-packages {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     max-width: 1400px;
     margin: 0 auto;
@@ -138,12 +161,12 @@ body {
     right: 0;
     padding: 1.5rem;
     color: white;
-    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
 }
 
 .package-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
 }
 
@@ -180,9 +203,11 @@ body {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .nav-links {
-        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
     }
-    
+
     .zone-packages {
         grid-template-columns: 1fr;
     }
@@ -190,13 +215,13 @@ body {
 
 @media (max-width: 768px) {
     .tour-icons {
-        flex-wrap: wrap;
+        grid-template-columns: 1fr;
     }
-    
+
     .package-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .hero h1 {
         font-size: 2.5rem;
     }
