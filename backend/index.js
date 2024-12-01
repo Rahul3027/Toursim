@@ -20,7 +20,6 @@ app.use((req, res) => {
     res.status(404).send('Sorry, page not found!');
 });
 
-
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
 });
